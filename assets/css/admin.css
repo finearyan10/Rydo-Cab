@@ -1,0 +1,204 @@
+/* ============================================================
+   RYDO — Admin & Captain dashboard
+   ============================================================ */
+
+.admin-heading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: var(--clr-text);
+}
+.admin-subheading {
+    font-size: 0.88rem;
+    color: var(--clr-muted);
+    margin-bottom: 1.4rem;
+}
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+.stat-card {
+    background: #fff;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.05rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    box-shadow: var(--shadow);
+}
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--clr-section);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    line-height: 1.2;
+}
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--clr-muted);
+    margin-top: 0.15rem;
+}
+
+.section-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0 0.9rem;
+}
+.section-toolbar h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--clr-text);
+}
+.section-toolbar p {
+    font-size: 0.82rem;
+    color: var(--clr-muted);
+}
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+.filter-bar form {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.filter-bar .form-control {
+    width: auto;
+    min-width: 150px;
+}
+
+.filter-bar input,
+.filter-bar select,
+.status-select {
+    background: #fff;
+    border: 1px solid var(--clr-border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--clr-text);
+    font-family: var(--font);
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+    outline: none;
+}
+.filter-bar input:focus,
+.filter-bar select:focus,
+.status-select:focus {
+    border-color: var(--clr-primary);
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    background: #fff;
+}
+.data-table th,
+.data-table td {
+    padding: 0.7rem 0.85rem;
+    text-align: left;
+    border-bottom: 1px solid var(--clr-border);
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.data-table th {
+    background: var(--clr-section);
+    color: #374151;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.data-table tbody tr:hover { background: #fafafa; }
+.data-table code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    background: var(--clr-section);
+    padding: 0.12rem 0.35rem;
+    border-radius: 4px;
+}
+.data-table .empty-row {
+    text-align: center;
+    padding: 2.5rem !important;
+    color: var(--clr-muted);
+    white-space: normal;
+}
+.booking-id {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.pin-code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: var(--clr-primary-soft);
+    color: var(--clr-primary);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 700;
+}
+.status-form {
+    display: flex;
+    gap: 0.35rem;
+    align-items: center;
+}
+.kyc-form {
+    display: inline-flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+}
+.duty-online { color: var(--clr-success); font-weight: 700; font-size: 0.82rem; }
+.duty-offline { color: var(--clr-muted); font-size: 0.82rem; }
+
+.pagination {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.page-btn {
+    background: #fff;
+    border: 1px solid var(--clr-border);
+    color: var(--clr-text);
+    border-radius: var(--radius-sm);
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: var(--font);
+    text-decoration: none;
+    display: inline-block;
+}
+.page-btn:hover,
+.page-btn.active {
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: #fff;
+}
+
+@media (max-width: 720px) {
+    .data-table th,
+    .data-table td { white-space: normal; }
+}
